@@ -8,14 +8,15 @@ let liEl = document.createElement('li')
 
 // issue classes , id and content
 let pages = ['About','Checkout','Modern Muse','Contact','Products']
-navSecEl.setAttribute('id','nav-section')
+navSecEl.classList.add('nav-section')
+ulEl.setAttribute('id','list')
 
 // pages funtion
 pages.forEach((links) => {
-    if(links === 'Modern Muse'){
+    if(links.toLowerCase() == 'Modern Muse'){
     return ulEl.innerHTML += `<li><a href='../index.html'>ModernMuse</a></li>`
     };
-    return ulEl.innerHTML += `<li><a href='../html/${links.toLowerCase()}.html'>${links.toLowerCase()}</a></li>`
+    return ulEl.innerHTML += `<li><a href='../html/${links}.html'>${links}</a></li>`
 });
 
 // appennding tags navbar
@@ -27,6 +28,11 @@ document.body.appendChild(navSecEl)
 // body content
 let bgimg = document.getElementsByTagName('body')[0]
 bgimg.setAttribute('id','bgimg')
+let mainEl = document.createElement('main')
+mainEl.classList.add('main')
+
+// append body content
+document.body.appendChild(mainEl)
 
 // footer
 // elements
@@ -37,71 +43,49 @@ let fterDivEl2 = document.createElement('div')
 let fterDivEl3 = document.createElement('div')
 let fterDivEl4 = document.createElement('div')
 let fterDivEl5 = document.createElement('div')
-let fterDivEl6 = document.createElement('div')
-let fterDivEl7 = document.createElement('div')
-let fterPEl1 = document.createElement('p')
-let fterPEl2 = document.createElement('p')
-let fterPEl3 = document.createElement('p')
-let fterPEl4 = document.createElement('p')
-let fterPEl5 = document.createElement('p')
-let fterPEl6 = document.createElement('p')
-let fterPEl7 = document.createElement('p')
+let footerDivEl = document.createElement('div')
+
 
 // issue classes , id and content
-fterEl.setAttribute('id','footer')
+fterEl.classList.add('footer')
 fterDivEl.classList.add('box1')
+footerDivEl.classList.add('copywrite')
 
 // footer bottom links
 // first array
-let ftrarr1 = [' Help ',' Services ',' About Store ',' Connect ']
+let ftrarr1 = [' Help ',' Email ',' FAQ ',' Product Care ', ' Stores ']
 ftrarr1.forEach((footlink)=>{
-    fterPEl1.innerText += `${footlink}`
+    return fterDivEl1.innerHTML += `<p>${footlink}</p>`
 })
 
 // second array
-let ftrarr2 = [' Email us ',' FAQ ',' Product Care ',' Stores ']
+let ftrarr2 = [' Services ',' Repairs ',' Persionalisation ',' Recomended Dry-cleaners ']
 ftrarr2.forEach((footlink)=>{
-    fterPEl2.innerText += `${footlink}`
+    return fterDivEl2.innerHTML += `<p>${footlink}</p>`
 })
 
 // third array
-let ftrarr3 = [' Repairs ',' Personalisation ',' Recommended Dry-cleaners']
+let ftrarr3 = [' About Store ',' Fasion Shows ',' Arts and Culture ',' Latest News ', ' Careers ']
 ftrarr3.forEach((footlink)=>{
-    fterPEl3.innerText += `${footlink}`
+    return fterDivEl3.innerHTML += `<p>${footlink}</p>`
 })
 
 // fourth array
-let ftrarr4 = [' Fashion Shows ',' Arts & Culture ',' Latest News ', ' Careers ']
+let ftrarr4 = [' Connect ',' Follow Us ']
 ftrarr4.forEach((footlink)=>{
-    fterPEl4.innerText += `${footlink}`
-})
-
-// Fifth array
-let ftrarr5 = [' Follow Us ']
-ftrarr5.forEach((footlink)=>{
-    fterPEl5.innerText += `${footlink}`
+    return fterDivEl4.innerHTML += `<p>${footlink}</p>`
 })
 
 // copywrite claim
-    fterPEl6.innerText += `2023 @ Modern Muse`
-    fterPEl7.innerText += `J.Smith : Founder & C.E.O`
+    footerDivEl.innerHTML += `<p>2023 @ Modern Muse</p>`
+    footerDivEl.innerHTML += `<p>J.Smith : Founder & C.E.O</p>`
 
 
 // footer append
 fterEl.appendChild(fterDivEl)
+fterEl.appendChild(footerDivEl)
 fterDivEl.appendChild(fterDivEl1)
 fterDivEl.appendChild(fterDivEl2)
 fterDivEl.appendChild(fterDivEl3)
 fterDivEl.appendChild(fterDivEl4)
-fterDivEl.appendChild(fterDivEl5)
-fterDivEl.appendChild(fterDivEl6)
-fterDivEl.appendChild(fterDivEl7)
-fterDivEl1.appendChild(fterPEl1)
-fterDivEl2.appendChild(fterPEl2)
-fterDivEl3.appendChild(fterPEl3)
-fterDivEl4.appendChild(fterPEl4)
-fterDivEl5.appendChild(fterPEl5)
-fterDivEl6.appendChild(fterPEl6)
-fterDivEl7.appendChild(fterPEl7)
-
 document.body.appendChild(fterEl)
