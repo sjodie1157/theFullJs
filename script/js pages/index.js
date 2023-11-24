@@ -4,6 +4,7 @@
 let navSecEl = document.createElement('section')
 let navEl = document.createElement('nav')
 let ulEl = document.createElement('ul')
+let liEl = document.createElement('li')
 
 // issue classes , id and content
 let pages = ['About','Checkout','Modern Muse','Contact','Products']
@@ -12,14 +13,15 @@ navSecEl.setAttribute('id','nav-section')
 // pages funtion
 pages.forEach((links) => {
     if(links === 'Modern Muse'){
-    return ulEl.innerHTML += `<a href='../index.html'>ModernMuse</a>`
+    return ulEl.innerHTML += `<li><a href='../index.html'>ModernMuse</a></li>`
     };
-    return ulEl.innerHTML += `<a href='../html/${links.toLowerCase()}.html'>${links.toLowerCase()}</a>`
+    return ulEl.innerHTML += `<li><a href='../html/${links.toLowerCase()}.html'>${links.toLowerCase()}</a></li>`
 });
 
 // appennding tags navbar
 navSecEl.appendChild(navEl)
 navEl.appendChild(ulEl)
+ulEl.appendChild(liEl)
 document.body.appendChild(navSecEl)
 
 // body content
