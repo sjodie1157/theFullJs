@@ -13,10 +13,13 @@ ulEl.setAttribute('id','list')
 
 // pages funtion
 pages.forEach((links) => {
-    if(links.toLowerCase() == 'Modern Muse'){
-    return ulEl.innerHTML += `<li><a href='../index.html'>ModernMuse</a></li>`
-    };
+    if(links == 'Modern Muse'){
+    return ulEl.innerHTML += `<li><a href='../index.html'>Modern Muse</a></li>`
+    }
+    else{
     return ulEl.innerHTML += `<li><a href='../html/${links}.html'>${links}</a></li>`
+    }
+    
 });
 
 // appennding tags navbar
