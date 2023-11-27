@@ -6,8 +6,8 @@ let navEl = document.createElement('nav')
 let ulEl = document.createElement('ul')
 let liEl = document.createElement('li')
 
-// issue classes , id and content
 let pages = ['About','Checkout','Modern Muse','Contact','Products']
+// issue classes , id and content
 navSecEl.classList.add('nav-section')
 ulEl.setAttribute('id','list')
 
@@ -30,12 +30,22 @@ document.body.appendChild(navSecEl)
 
 // body content
 let bgimg = document.getElementsByTagName('body')[0]
-bgimg.setAttribute('id','bgimg')
 let mainEl = document.createElement('main')
+let mainH1El = document.createElement('h1')
+let mainPEl = document.createElement('P')
+
+// issue classes , id and content
+bgimg.setAttribute('id','bgimg')
 mainEl.classList.add('main')
+mainH1El.classList.add('animation')
+mainPEl.classList.add('animation')
 
 // append body content
+mainEl.appendChild(mainH1El)
+mainEl.appendChild(mainPEl)
 document.body.appendChild(mainEl)
+mainH1El.innerText = `Modern Muse`
+mainPEl.innerText = `Welcome to Modern Muse! Where style meets confidence and every outfit tells a unique story. Step into a world of fashion that empowers you to express your individuality. Our curated collection awaits, ready to inspire your wardrobe journey. Enjoy the experience and embrace your fashion journey with us!`
 
 // footer
 // elements
