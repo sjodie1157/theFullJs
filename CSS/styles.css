@@ -12,16 +12,18 @@
     position: sticky;
     top: 0;
     border: 1px solid #080D07;
-    background: rgba(8, 13, 7, 0.75);
+    background: rgba(8, 13, 7,1);
     padding: 1.5em;
+    z-index: 1;
 }
 
 .nav-section ul {
     display: flex;
     list-style: none;
-    justify-content: center;
-    justify-content: space-around;
     align-items: center;
+}
+.nav-section a {
+    padding: 0 3rem;
 }
 
 .nav-section a {
@@ -33,6 +35,31 @@
 }
 
 #list li:nth-child(3) a {
+    font-size: 80px;
+}
+
+/* main content */
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Jura', sans-serif;
+    padding: 10em 0 0 0;
+}
+
+section p {
+    color: white;
+    width: 80%;
+    font-size: 25px;
+}
+
+section h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    width: 80%;
     font-size: 80px;
 }
 
@@ -86,4 +113,51 @@ body {
 
 .main {
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.293);
+}
+
+section .animate {
+    transition: 1s;
+}
+
+.sec-1 .animate {
+    transform: translatey(0%);
+}
+
+.sec-1.show-animate .animate {
+    transform: translatey(-100%);
+    color: #080d0700;
+}
+
+.sec-2 .animate {
+    transform: translatey(220%);
+    color: #080d0700;
+    padding: .4em;
+}
+
+.sec-2.show-animate .animate {
+    transform: translatey(0%);
+    color: white;
+}
+
+/* animated images */
+img[alt="gucci"]{
+    width: 300px;
+    aspect-ratio: 2/1;
+    border-radius: 2pc;
+    margin: 0 3rem ;
+}
+
+img[alt="prada"]{
+    width: 300px;
+    aspect-ratio: 2/1;
+    border-radius: 2pc;
+    margin: 0 3rem ;
+}
+
+img[alt="versace"]{
+    width: 300px;
+    aspect-ratio: 2/1;
+    border-radius: 2pc;
+    margin: 0 3rem ;
 }
