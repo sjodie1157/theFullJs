@@ -1,0 +1,43 @@
+@media screen and (1920px<=width) {
+    .nav-section a {
+        font-size: 60px;
+        transition: all .3ms;
+    }
+
+    #list li:nth-child(3) a {
+        font-size: 100px;
+        font-weight: bolder;
+        transition: all .3ms;
+    }
+
+    .sec-1 h1 {
+        font-size: 120px;
+    }
+    
+    .sec-1 p {
+        font-size: 35px;
+    }
+
+    .sec-2 h1 {
+        font-size: 110px;
+        margin: 11rem 0 7rem 0;
+    }
+
+    img[alt="gucci"]{
+        width: 400px;
+        margin: 0 5rem ;
+    }
+    
+    img[alt="prada"]{
+        width: 400px;
+        margin: 0 5rem ;
+    }
+    
+    img[alt="versace"]{
+        width: 400px;
+        margin: 0 5rem ;
+    }
+}
+@media screen and (1600px<=width<1920px) {
+   
+}
